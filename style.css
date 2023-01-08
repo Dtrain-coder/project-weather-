@@ -1,0 +1,40 @@
+body {
+  background-color: #6c7879;
+  padding: 5px;
+}
+button {
+  display: block;
+  margin: 0 auto;
+  border-radius: 0px;
+}
+form {
+  text-align: right;
+  padding: -1px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  color: #42c2e5;
+}
+h2 {
+  text-align: center;
+  color: #42c2e5;
+}
+h5 {
+  padding: 2px;
+}
+p {
+  text-align: center;
+  font-weight: thin;
+  color: #42c2e5;
+}
+.row {
+  font-weight: bold;
+  border-radius: 5px;
+}
+.card {
+  padding: -5px;
+  background-color: #bae8e8;
+  max-width: 300px;
+  margin: 0 auto;
+}
