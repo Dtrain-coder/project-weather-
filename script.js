@@ -4,9 +4,13 @@ let apiUrl =
 function currentTemperature(response) {
   console.log(response);
   let temperature = Math.round(response.data.main.temp);
+  let humidtyElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
   let temperatureElement = document.querySelector("#temperature");
   let description = document.querySelector("#temperature-description");
   temperatureElement.innerHTML = `${temperature} °F`;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   description.innerHTML = response.data.main.weather[0].description;
 }
 
