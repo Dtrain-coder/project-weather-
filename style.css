@@ -8,9 +8,10 @@ button {
   display: block;
   margin: 0 auto;
   border-radius: 10px;
-  color: rgb(116, 149, 153);
+  color: #222323;
   text-align: right;
 }
+
 form {
   text-align: right;
   padding: -1px;
@@ -20,20 +21,21 @@ form {
 }
 h1 {
   text-align: center;
-  color: #14666f;
+  color: #222323;
 }
 h2 {
   text-align: center;
-  color: #1445b9;
+  color: #222323;
 }
 h5 {
   padding: 2px;
   margin-bottom: 0.5rem;
+  color: #222424;
 }
 p {
   text-align: center;
   font-weight: thin;
-  color: hsl(193, 43%, 41%);
+  color: #222323;
 }
 .row {
   font-weight: bold;
