@@ -11,14 +11,6 @@ button {
   color: #222323;
   text-align: right;
 }
-div.container {
-  text-align: center;
-  font-weight: thin;
-
-  margin: 0;
-  padding: 0;
-  color: #222323;
-}
 form {
   text-align: right;
   padding: -1px;
