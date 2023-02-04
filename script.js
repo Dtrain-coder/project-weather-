@@ -60,7 +60,7 @@ let celsiusTemperature = null;
 
 function displayToCelsius(event) {
   event.preventDefault();
-  let celsiusTemperature = (fahrenheiTemperature * 9) / 5 + 32;
+  let celsiusTemperature = ((fahrenheiTemperature - 32) * 5) / 9;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
