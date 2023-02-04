@@ -28,21 +28,23 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 function searchCity(event) {
+  event.preventDefault();
+  let cityElement = document.querySelector("#city");
+  let cityInput = document.querySelector("#city-input");
+  cityElement.innerHTML = cityInput.value;
+
+  let units = "metric";
   let apiKey = "0dc40d3d7cda209ca40e77430c74cf57";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=${units}`;
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTemperature);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apikey}&units=${units}`;
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(displayWeatherCondition);
 }
 
-function handleSubmit(event) {
-  event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  searchCity(cityInputElement.value);
-  let searchForm = document.querySelector("#search-form");
-  searchForm.addEventListener("submit", searchCity);
-}
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", searchCity);
 
 function displayToFahrenheit(event) {
   event.preventDefault();
