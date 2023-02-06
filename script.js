@@ -46,7 +46,7 @@ function searchCity(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
-function displayToFahrenheit(event) {
+function displayFahrenheitCondition(event) {
   event.preventDefault();
   let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
@@ -55,7 +55,7 @@ function displayToFahrenheit(event) {
 
 let celsiusTemperature = null;
 
-function displayToCelsius(event) {
+function displayCelsiusCondition(event) {
   event.preventDefault();
   let celsiusTemperature = ((fahrenheiTemperature - 32) * 5) / 9;
   let temperatureElement = document.querySelector("#temperature");
