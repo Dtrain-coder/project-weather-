@@ -4,11 +4,11 @@ function currentTemperature(response) {
   let humidtyElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let temperatureElement = document.querySelector("#temperature");
-  let description = document.querySelector("#temperature-description");
+  let descriptionElement = document.querySelector("#temperature-description");
   temperatureElement.innerHTML = `${temperature} °F`;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  description.innerHTML = response.data.main.weather[0].description;
+  descriptionElement.innerHTML = response.data.main.weather[0].description;
 }
 
 function showPosition(position) {
@@ -18,8 +18,8 @@ function showPosition(position) {
   currentButton.addEventListener("click", getCurrentPosition);
 }
 
-function getCurrentPosition() {
-  navigator.geolocation.getCurrentLocation(showPosition);
+function getCurrentLocation() {
+  navigator.geolocation.getCurrentPosition(showPosition);
 }
 
 function displayWeatherCondition(response) {
@@ -39,8 +39,8 @@ function searchCity(event) {
 
   let units = "metric";
   let apiKey = "0dc40d3d7cda209ca40e77430c74cf57";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apikey}&units=${units}`;
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(displayWeatherCondition);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 let searchForm = document.querySelector("#search-form");
@@ -57,7 +57,7 @@ let celsiusTemperature = null;
 
 function displayCelsiusCondition(event) {
   event.preventDefault();
-  let celsiusTemperature = ((fahrenheiTemperature - 32) * 5) / 9;
+  celsiusTemperature = ((fahrenheiTemperature - 32) * 5) / 9;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
