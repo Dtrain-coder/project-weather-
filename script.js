@@ -38,9 +38,11 @@ function searchCity(event) {
   cityElement.innerHTML = cityInput.value;
 
   let units = "metric";
-  let apiKey = "db039c75a7b4t8a4e600oa487f1d73d6";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?q=Philadelphia&key=db039c75a7b4t8a4e600oa487f1d73d6&units=metric`;
-  axios.get(apiUrl).then(displayWeatherCondition);
+  let apiKey = "39aaeb54cb425a2168fdba792b707aa2";
+  let apiUrl = https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=${units};
+  axios.get(apiUrl).then(response => {
+    console.log(response.data);
+  });
 }
 
 let searchForm = document.querySelector("#search-form");
