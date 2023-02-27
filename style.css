@@ -27,9 +27,8 @@ h2 {
   color: #222323;
 }
 h5 {
-  background-color: darkcyan;
-  padding: 5px;
-
+  margin-bottom: 0.5rem;
+  padding: -5px;
   color: #222424;
 }
 p {
