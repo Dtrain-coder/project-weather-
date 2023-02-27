@@ -38,11 +38,9 @@ function searchCity(event) {
   cityElement.innerHTML = cityInput.value;
 
   let units = "metric";
-  let apiKey = "39aaeb54cb425a2168fdba792b707aa2";
-  let apiUrl = https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=${units};
-  axios.get(apiUrl).then(response => {
-    console.log(response.data);
-  });
+  let apiKey = "0dc40d3d7cda209ca40e77430c74cf57";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 let searchForm = document.querySelector("#search-form");
