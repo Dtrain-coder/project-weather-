@@ -1,11 +1,6 @@
 body {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(0, 93, 133) 0%,
-    rgb(0, 181, 149) 90%
-  );
-
-  padding: 1px 1px 1px 1px;
+  background: #5dacbd;
+  padding: 1px 0px 1px 0px;
 }
 button {
   background-color: aliceblue;
