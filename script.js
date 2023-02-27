@@ -39,7 +39,7 @@ function searchCity(event) {
 
   let units = "metric";
   let apiKey = "db039c75a7b4t8a4e600oa487f1d73d6";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?q=${cityInput.value}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=db039c75a7b4t8a4e600oa487f1d73d6&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
