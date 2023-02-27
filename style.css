@@ -1,10 +1,11 @@
 body {
-  background: linear-gradient(
-    178.6deg,
-    rgb(20, 36, 50) 11.8%,
-    rgb(124, 143, 161) 83.8%
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 93, 133) 0%,
+    rgb(0, 181, 149) 90%
   );
-  padding: 5px 5px 5px 5px;
+
+  padding: 1px 1px 1px 1px;
 }
 button {
   background-color: aliceblue;
