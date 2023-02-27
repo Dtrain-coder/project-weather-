@@ -39,7 +39,7 @@ p {
 }
 .row {
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 1px;
 }
 .card {
   padding: -1px;
